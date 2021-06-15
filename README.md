@@ -4,3 +4,6 @@
 2. Применены флекс и грид блоки.
 3. Добавлен popup с применение java-script.
 4. Файловая структура выстроена по БЭМ.
+
+
+Ссылка проекта :arrow_right: https://tatyanadok.github.io/mesto/
