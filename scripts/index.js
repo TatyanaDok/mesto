@@ -9,7 +9,7 @@ const popupClouseButtonElement = document.querySelector('.popup__close');
 const formElement = document.querySelector('.popup__form');
 const nameInput = document.querySelector('.popup__form-name');
 const jobInput = document.querySelector('.popup__form-job');
-const buttonSave = document.querySelector('.button__save');
+const buttonSave = document.querySelector('.popup__save-button');
 console.log({popupClouseButtonElement, profileButtonElement, profileName, profileJob, formElement, jobInput, nameInput})
 
 

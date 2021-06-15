@@ -1,4 +1,4 @@
-.button__like{
+.element__like-button{
     background: url(../../../images/Vector.svg);
     background-repeat: no-repeat;
     color: #000000;
@@ -8,10 +8,10 @@
     background-position: center;
     
 }
-.button__like:hover{
+.element__like-button:hover{
     opacity: 0.5;
 }
-.button__like-active{
+.element__button-active{
     background: url(../../../images/hartactive.svg);
     background-position: center;
 }
