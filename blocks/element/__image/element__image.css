@@ -4,15 +4,12 @@
   border-radius: 10px 10px 0 0;
 }
 @media screen and (max-width: 720px) {
-.element__image {
-  width: 382px;
-    
+  .element__image {
+    width: 382px;
   }
 }
 @media screen and (max-width: 550px) {
-.element__image {
-  width: 282px;
-      
+  .element__image {
+    width: 282px;
   }
 }
-  

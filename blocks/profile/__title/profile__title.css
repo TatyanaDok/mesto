@@ -11,19 +11,16 @@
   overflow: hidden;
 }
 @media screen and (max-width: 720px) {
-.profile__title {
-  font-size: 30px;
-  
-  }
-}
-  
-@media screen and (max-width: 320px) {
-.profile__title {
-  font-size: 27px;
-  line-height: 33px;
-  text-align: center;
-  margin-left: 40px;
-  
+  .profile__title {
+    font-size: 30px;
   }
 }
 
+@media screen and (max-width: 320px) {
+  .profile__title {
+    font-size: 27px;
+    line-height: 33px;
+    text-align: center;
+    margin-left: 40px;
+  }
+}

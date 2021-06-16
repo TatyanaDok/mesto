@@ -12,20 +12,15 @@
 }
 
 @media screen and (max-width: 720px) {
-.profile__subtitle {
-  font-size: 18px;
-  line-height: 17px;
-  justify-self: center;
-  
+  .profile__subtitle {
+    font-size: 18px;
+    line-height: 17px;
+    justify-self: center;
   }
 }
 
 @media screen and (max-width: 320px) {
-.profile__subtitle {
-  font-size: 18px;
-    
-    
+  .profile__subtitle {
+    font-size: 18px;
   }
 }
-  
-  

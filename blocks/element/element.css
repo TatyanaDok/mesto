@@ -7,20 +7,17 @@
 @media screen and (max-width: 900px) {
   .element {
     justify-self: center;
-    
-    }
   }
+}
 @media screen and (max-width: 720px) {
-.element {
+  .element {
     width: 382px;
-    height: 461px;  
+    height: 461px;
   }
 }
 @media screen and (max-width: 550px) {
-.element {
-  width: 282px;
-  height: 361px;
-              
+  .element {
+    width: 282px;
+    height: 361px;
   }
 }
-    

@@ -2,7 +2,7 @@
   background: transparent center url(../../../images/CloseIcon.svg);
   width: 40px;
   height: 40px;
-  box-sizing:border-box;
+  box-sizing: border-box;
   border: none;
   position: absolute;
   top: -40px;
@@ -12,12 +12,11 @@
   opacity: 0.6;
   transform: rotate(450deg);
 }
-@media screen and (max-width: 550px){
-.popup__close {
-  top: -46px;
-  left: 250px;
-  width: 26px;
-  height: 26px;
-  
+@media screen and (max-width: 550px) {
+  .popup__close {
+    top: -46px;
+    left: 250px;
+    width: 26px;
+    height: 26px;
   }
 }
