@@ -1,4 +1,8 @@
 .body {
   background-color:#000000;
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  overflow-x: hidden;
   
 }
