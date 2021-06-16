@@ -1,14 +1,21 @@
-.footer{
-    width: 318px;
-    margin: 67px 0 0 200px;
-    padding-bottom: 60px;
-   
-  }
-  @media screen and (max-width: 320px){
-    .footer{
-        width: 282px;
-        margin: 48px auto 0;
-        padding-bottom: 36px;
-    }
+.footer {
+  max-width: 880px;
+  margin: 67px auto 0;
+  padding-bottom: 60px;
+}
+
+@media screen and (max-width: 900px) {
+.footer {
+  max-width: 720px;
     
- }  
+    }
+  }
+
+@media screen and (max-width: 720px) {
+.footer {
+  text-align: center;
+  margin: 48px auto 0;
+  padding-bottom: 36px;
+  max-width: 382px;
+  }
+}
