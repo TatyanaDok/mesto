@@ -6,4 +6,5 @@
 4. Файловая структура выстроена по БЭМ.
 
 
+
 Ссылка проекта :arrow_right: https://tatyanadok.github.io/mesto/
