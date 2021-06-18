@@ -1,0 +1,12 @@
+.popup__is_opened {
+    display: flex;
+    height: 720px;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 550px) {
+    .popup__is_opened {
+        height: 568px;
+    }
+}

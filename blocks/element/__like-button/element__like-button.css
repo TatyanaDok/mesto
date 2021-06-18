@@ -1,16 +1,15 @@
 .element__like-button {
-  background: url(../../../images/Vector.svg);
-  background-repeat: no-repeat;
-  color: #000000;
-  width: 22px;
-  border: none;
-  padding: 0;
-  background-position: center;
+    background: url(../../../images/vector.svg);
+    background-repeat: no-repeat;
+    color: #000000;
+    width: 22px;
+    border: none;
+    padding: 0;
+    background-position: center;
+    cursor: pointer;
+    margin-right: 4px;
 }
+
 .element__like-button:hover {
-  opacity: 0.5;
-}
-.element__button-active {
-  background: url(../../../images/hartactive.svg);
-  background-position: center;
+    opacity: 0.5;
 }
