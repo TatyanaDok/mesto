@@ -5,17 +5,17 @@ const profileButtonElement = document.querySelector(".profile__edit-button");
 const popupElement = document.querySelector(".popup");
 const popupClouseButtonElement = document.querySelector(".popup__close");
 const formElement = document.querySelector(".popup__form");
-const nameInput = document.querySelector(".popup__item_name");
-const jobInput = document.querySelector(".popup__item_job");
+const nameInput = document.querySelector(".popup_item_name");
+const jobInput = document.querySelector(".popup_item_job");
 
 const openPopup = function() {
-    popupElement.classList.add("popup__is_opened");
+    popupElement.classList.add("popup_is-opened");
     nameInput.value = profileName.textContent;
     jobInput.value = profileJob.textContent;
 };
 
 const closePopup = function() {
-    popupElement.classList.remove("popup__is_opened");
+    popupElement.classList.remove("popup_is-opened");
 };
 
 function formSubmitHandler(evt) {
