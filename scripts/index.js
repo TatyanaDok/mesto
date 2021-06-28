@@ -63,7 +63,7 @@ const initialCards = [{
 
 //Делаем выборку DOM элементов для шаблона
 
-const popupContainerImg = document.querySelector(".popup__container-img");
+const popupContainerImg = document.querySelector(".popup__container-image");
 const elementTeplate = document.querySelector(".element-template");
 const elementsContainer = document.querySelector(".elements");
 
@@ -94,8 +94,8 @@ function createElement(name, link) {
 
     const popupImage = document.getElementById("popup-img");
     const popupClouseImg = document.getElementById("close-img");
-    const popupNameImg = document.querySelector(".popup__name");
-    const popupImg = document.querySelector(".popup__img");
+    const popupNameImg = document.querySelector(".popup__text");
+    const popupImg = document.querySelector(".popup__image");
 
     //Открытие попапа просмотра изображений. Кнопка imageElement.
     const openPopupImg = function() {
