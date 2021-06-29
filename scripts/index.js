@@ -91,11 +91,11 @@ function createElement(name, link) {
 
 
     //Делаем выборку DOM элементов для попапа
-    const popupContainerImg = document.querySelector(".image__container");
+    const popupContainerImg = document.querySelector(".popup__container-image");
     const popupImage = document.getElementById("popup-img");
     const popupClouseImg = document.getElementById("close-img");
     const popupNameImg = document.querySelector(".popup__text");
-    const popupImg = document.querySelector(".image");
+    const popupImg = document.querySelector(".popup__image");
 
     //Открытие попапа просмотра изображений. Кнопка imageElement.
     const openPopupImg = function() {
