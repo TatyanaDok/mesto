@@ -7,4 +7,4 @@
 
 
 
-Ссылка проекта :arrow_right:   https://tatyanadok.github.io/mesto/
+Ссылка проекта :arrow_right:    https://tatyanadok.github.io/mesto/
