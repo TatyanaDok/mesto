@@ -109,7 +109,7 @@ function createElement(name, link) {
 
     //Лайки.
     likeButton.addEventListener("click", function(e) {
-        likeButton.classList.toggle("element__button-like_active");
+        likeButton.classList.toggle("element__like-button_active");
     });
 
     //Открытие попапа с фото.
