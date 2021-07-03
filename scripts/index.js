@@ -13,8 +13,8 @@ const nameInput = document.querySelector(".popup__item_form_name");
 const jobInput = document.querySelector(".popup__item_form_job");
 const closeEditFormButton = document.querySelector(".popup__close-edit");
 const closeImageFormButton = document.querySelector(".popup__close-image");
-const popupTextImage = document.querySelector(".popup__text");
 const popupElementImage = document.querySelector(".popup__image");
+const popupTextImage = document.querySelector(".popup__text");
 const elementImageTeplate = document.querySelector(".element__image");
 const popupCards = document.querySelector(".popup_cards");
 const elementTeplate = document.querySelector(".element-template");
@@ -30,25 +30,24 @@ function openPopup(popup) {
 function closePopup(popup) {
     popup.classList.remove("popup_is-opened");
 };
+
 //Обработчик данных.
 function handleProfileFormSubmit(evt) {
     evt.preventDefault();
     profileName.textContent = nameInput.value;
     profileJob.textContent = jobInput.value;
+
     closePopup(popupEditElement);
 }
-
-
-
-//Передача данных в попапы.
-nameInput.value = profileName.textContent;
-jobInput.value = profileJob.textContent;
-nameInput.value = profileName.textContent;
-jobInput.value = profileJob.textContent;
-
+//Открытие попапа Edit.
+profileEditButton.addEventListener("click", function(e) {
+    openPopup(popupEditElement);
+    nameInput.value = profileName.textContent;
+    jobInput.value = profileJob.textContent;
+});
 
 //Слушатели для кнопок.
-profileEditButton.addEventListener("click", () => openPopup(popupEditElement));
+
 closeEditFormButton.addEventListener("click", () => closePopup(popupEditElement));
 formElementEditPopup.addEventListener("submit", handleProfileFormSubmit);
 closeAddFormButton.addEventListener("click", () => closePopup(popupAddElement));
@@ -112,19 +111,16 @@ function createElement(name, link) {
     likeButton.addEventListener("click", function(e) {
         likeButton.classList.toggle("element__button-like_active");
     });
-    //Открытие попапа с картинками. Добавление данных.
 
-    function openPopup(popupCards) {
-        popupCards.classList.add("popup_is-opened");
-        popupElementImage.src = imageElement.src;
-        popupElementImage.alt = newElement.textContent;
-        popupTextImage.textContent = newElement.textContent;
-    };
-
-    imageElement.addEventListener("click", () => openPopup(popupCards));
-
-
+    //Открытие попапа с фото.
+    imageElement.addEventListener("click", function(evt) {
+        openPopup(popupCards);
+        popupElementImage.src = evt.target.src;
+        popupElementImage.alt = name;
+        popupTextImage.textContent = name;
+    });
     return newElement;
+
 
 };
 //Вывод новых карточек.
@@ -148,4 +144,3 @@ const addNewElement = (evt) => {
 
 };
 formElementAddPopup.addEventListener("submit", addNewElement);
-//Добавление данных в попап.
