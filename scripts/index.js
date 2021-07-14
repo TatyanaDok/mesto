@@ -23,6 +23,7 @@ const popupFormUrl = document.querySelector(".popup__item_form_url");
 
 
 
+
 //Функция открытия попапа.
 function openPopup(popup) {
     popup.classList.add("popup_is-opened");
@@ -77,7 +78,7 @@ formElementEditPopup.addEventListener("submit", handleProfileFormSubmit);
 closeAddFormButton.addEventListener("click", () => closePopup(popupAddElement));
 profileAddButton.addEventListener("click", () => openPopup(popupAddElement));
 closeImageFormButton.addEventListener("click", () => closePopup(popupCards));
-
+profileAddButton.addEventListener("click", () => openPopup(popupAddElement));
 
 
 
@@ -158,13 +159,17 @@ initialCards.forEach(function(el) {
 //Сохранение новой карточки
 const addNewElement = (evt) => {
     evt.preventDefault();
+
     const newName = popupFormName.value;
     const newLink = popupFormUrl.value;
     elementsContainer.prepend(createElement(newName, newLink));
+    const popupButton = document.querySelector(".popup__button-create");
+
+    popupButton.setAttribute("disabled", true);
+    popupButton.classList.add("popup__button_inactive");
+
+    evt.target.reset();
+
     closePopup(popupAddElement);
-
-    popupFormName.value = "";
-    popupFormUrl.value = "";
-
 };
 formElementAddPopup.addEventListener("submit", addNewElement);
