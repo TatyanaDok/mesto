@@ -2,7 +2,6 @@
 const popupEditElement = document.querySelector(".popup_edit-element");
 const popupAddElement = document.querySelector(".popup_add-element");
 const profileAddButton = document.querySelector(".profile__add-button");
-const formElementAdd = document.querySelector(".popup__form");
 const formElementAddPopup = document.querySelector(".popup__form-add");
 const closeAddFormButton = document.querySelector(".popup__close-add");
 const formElementEditPopup = document.querySelector(".popup__form-edit");
@@ -22,14 +21,38 @@ const elementsContainer = document.querySelector(".elements");
 const popupFormName = document.querySelector(".popup__item_form_names");
 const popupFormUrl = document.querySelector(".popup__item_form_url");
 
+
+
 //Функция открытия попапа.
 function openPopup(popup) {
     popup.classList.add("popup_is-opened");
+    document.addEventListener("keydown", handleEsc);
+
 };
 
 function closePopup(popup) {
     popup.classList.remove("popup_is-opened");
+    document.removeEventListener("keydown", handleEsc);
+
 };
+
+//Закрытие попапа по клику на оверлей
+document.addEventListener("click", (evt) => {
+    if (evt.target.classList.contains("popup_is-opened")) {
+        const activePopup = document.querySelector(".popup_is-opened");
+        closePopup(activePopup);
+    };
+});
+
+//Закрытие попапа по нажатию на Escape
+const handleEsc = function(evt) {
+    if (evt.keyCode === 27) {
+        const activePopup = document.querySelector(".popup_is-opened");
+        closePopup(activePopup);
+    };
+};
+
+
 
 //Обработчик данных.
 function handleProfileFormSubmit(evt) {
@@ -45,6 +68,7 @@ profileEditButton.addEventListener("click", function(e) {
     nameInput.value = profileName.textContent;
     jobInput.value = profileJob.textContent;
 });
+
 
 //Слушатели для кнопок.
 
