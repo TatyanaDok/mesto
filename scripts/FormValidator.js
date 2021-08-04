@@ -6,7 +6,6 @@ export class FormValidator {
         this._inactiveButtonClass = validationConfig.inactiveButtonClass;
         this._errorClass = validationConfig.errorClass;
     }
-
     enableValidation = () => {
         const formElement = document.querySelectorAll(this._formSelector);
         const formList = Array.from(formElement);
@@ -27,8 +26,6 @@ export class FormValidator {
 
         this._toggleButtonState(inputList, buttonElement, this._inactiveButtonClass);
 
-
-
         inputList.forEach(inputElement => {
             inputElement.addEventListener("input", (event) => {
                 this._checkInputValidity(formElement, inputElement, this._errorClass);
@@ -37,19 +34,23 @@ export class FormValidator {
         });
 
     };
-    //Подключаем неактивную кнопку в случае ошибки
-    _toggleButtonState = (inputList, buttonElement, inactiveButtonClass) => {
+
+    disabled(buttonElement) {
+        buttonElement.classList.add(this._inactiveButtonClass);
+        buttonElement.setAttribute("disabled", true);
+    }
+
+    _toggleButtonState = (inputList, buttonElement) => {
         const hasNotValidInput = inputList.some((inputElement) => !inputElement.validity.valid);
 
         if (hasNotValidInput) {
-
-            buttonElement.setAttribute("disabled", true);
-            buttonElement.classList.add(inactiveButtonClass);
+            this.disabled(buttonElement);
         } else {
             buttonElement.removeAttribute("disabled");
-            buttonElement.classList.remove(inactiveButtonClass);
+            buttonElement.classList.remove(this._inactiveButtonClass);
         };
     };
+
     //Показываем ошибку
     _showInputError = (formElement, inputElement, errorMessage, errorClass) => {
         const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
@@ -66,16 +67,13 @@ export class FormValidator {
     };
     //Проверяем инпуты на ошибки
     _checkInputValidity = (formElement, inputElement, errorClass) => {
-
         const isInputNotValid = !inputElement.validity.valid;
-
 
         if (isInputNotValid) {
             const errorMessage = inputElement.validationMessage;
-
             this._showInputError(formElement, inputElement, errorMessage, errorClass);
         } else {
             this._hideInputError(formElement, inputElement, errorClass);
         }
     };
-}
+};
