@@ -21,17 +21,18 @@ const popupCards = document.querySelector(".popup_cards");
 const elementsContainer = document.querySelector(".elements");
 const popupFormName = document.querySelector(".popup__item_form_names");
 const popupFormUrl = document.querySelector(".popup__item_form_url");
+const popupButton = document.querySelector(".popup__button-create");
+
 
 //объект с селекторами
 const validationConfig = {
-    formSelector: ".popup__form",
     inputSelector: ".popup__item",
     submitButtonSelector: ".popup__button",
     inactiveButtonClass: "popup__button_inactive",
     errorClass: "popup__input-error_is_active"
 }
-const formValidatorEdit = new FormValidator(validationConfig, ".popup_edit-element");
-const formValidatorAdd = new FormValidator(validationConfig, ".popup_add-element");
+const formValidatorEdit = new FormValidator(validationConfig, formElementEditPopup);
+const formValidatorAdd = new FormValidator(validationConfig, formElementAddPopup);
 
 formValidatorEdit.enableValidation();
 formValidatorAdd.enableValidation();
@@ -76,20 +77,23 @@ function closePopup(popup) {
     document.removeEventListener("keydown", handleEsc);
     document.removeEventListener("click", handleOverlay);
 };
+//Функция закрытия активного попапа
+function closeActivePopup() {
+    const activePopup = document.querySelector(".popup_is-opened");
+    activePopup.classList.remove("popup_is-opened");
 
+}
 //Закрытие попапа по клику на оверлей
 const handleOverlay = function(evt) {
     if (evt.target.classList.contains("popup_is-opened")) {
-        const activePopup = document.querySelector(".popup_is-opened");
-        closePopup(activePopup);
+        closeActivePopup()
     };
 };
 
 //Закрытие попапа по нажатию на Escape
 const handleEsc = function(evt) {
     if (evt.key === "Escape") {
-        const activePopup = document.querySelector(".popup_is-opened");
-        closePopup(activePopup);
+        closeActivePopup()
     };
 };
 
@@ -116,9 +120,8 @@ const addNewElement = (evt) => {
 
     const addedCard = createCard({ name: name, link: link });
     elementsContainer.prepend(addedCard);
-    const popupButton = document.querySelector(".popup__button-create");
 
-    formValidatorEdit.disabled(popupButton);
+    formValidatorEdit.disableButton(popupButton);
     evt.target.reset();
     closePopup(popupAddElement);
 };
