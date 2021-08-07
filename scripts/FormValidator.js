@@ -11,9 +11,9 @@ export class FormValidator {
     }
 
     //публичный метод для неактивной кнопки
-    disableButton(buttonElement) {
-        buttonElement.classList.add(this._inactiveButtonClass);
-        buttonElement.setAttribute("disabled", true);
+    disableButton() {
+        this._buttonElement.classList.add(this._inactiveButtonClass);
+        this._buttonElement.setAttribute("disabled", true);
     }
 
     //добавляем неактивную кнопку
@@ -21,7 +21,7 @@ export class FormValidator {
         const hasNotValidInput = this._inputList.some((inputElement) => !inputElement.validity.valid);
 
         if (hasNotValidInput) {
-            this.disableButton(this._buttonElement);
+            this.disableButton();
         } else {
             this._buttonElement.removeAttribute("disabled");
             this._buttonElement.classList.remove(this._inactiveButtonClass);

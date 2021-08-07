@@ -21,8 +21,6 @@ const popupCards = document.querySelector(".popup_cards");
 const elementsContainer = document.querySelector(".elements");
 const popupFormName = document.querySelector(".popup__item_form_names");
 const popupFormUrl = document.querySelector(".popup__item_form_url");
-const popupButton = document.querySelector(".popup__button-create");
-
 
 //объект с селекторами
 const validationConfig = {
@@ -121,7 +119,7 @@ const addNewElement = (evt) => {
     const addedCard = createCard({ name: name, link: link });
     elementsContainer.prepend(addedCard);
 
-    formValidatorEdit.disableButton(popupButton);
+    formValidatorAdd.disableButton();
     evt.target.reset();
     closePopup(popupAddElement);
 };
