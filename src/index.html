@@ -7,14 +7,15 @@
     <title>Mesto</title>
 </head>
 
+
 <body class="body">
     <div class="root">
         <header class="header">
-            <img src="<%=require('../images/logo.svg')%>" alt="логотип" class="header__logo" />
+            <img src="<%=require('./images/logo.svg')%>" alt="логотип" class="header__logo" />
         </header>
         <main class="content">
             <section class="profile">
-                <img src="<%=require('../images/kusto.jpg')%>" alt="Логотип" class="profile__avatar">
+                <img src="<%=require('./images/kusto.jpg')%>" alt="Логотип" class="profile__avatar">
                 <div class="profile__info">
                     <h1 class="profile__title">Жак-Ив Кусто</h1>
                     <button type="button" aria-label="Открыть" class="profile__edit-button"></button>
@@ -65,8 +66,9 @@
 
         <div class="popup popup_cards">
             <div class="popup__container-image">
-                <img src="#" alt="Фото" class="popup__image">
                 <button type="button" aria-label="Закрыть" class="popup__close-button popup__close-image"></button>
+                <img src="#" alt="Фото" class="popup__image">
+
                 <h2 class="popup__text"></h2>
             </div>
         </div>
@@ -81,9 +83,6 @@
             </div>
         </template>
     </div>
-
-
-
 
 </body>
 
