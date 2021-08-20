@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mesto</title>
+
 </head>
 
 
@@ -12,10 +13,12 @@
     <div class="root">
         <header class="header">
             <img src="<%=require('./images/logo.svg')%>" alt="логотип" class="header__logo" />
+
         </header>
         <main class="content">
             <section class="profile">
                 <img src="<%=require('./images/kusto.jpg')%>" alt="Логотип" class="profile__avatar">
+
                 <div class="profile__info">
                     <h1 class="profile__title">Жак-Ив Кусто</h1>
                     <button type="button" aria-label="Открыть" class="profile__edit-button"></button>
@@ -52,11 +55,11 @@
                 <h2 class="popup__title">Новое место</h2>
                 <form name="add-form" id="add-form" class="popup__form popup__form-add" novalidate>
                     <section class="popup__form-section">
-                        <input type="text" name="names" id="names" placeholder="Название" required minlength="2" maxlength="30" class="popup__item popup__item_form_names" />
+                        <input type="text" name="name" id="names" placeholder="Название" required minlength="2" maxlength="30" class="popup__item popup__item_form_names" />
                         <span class="names-error popup__input-error "></span>
                     </section>
                     <section class="popup__form-section">
-                        <input type="url" name="url" id="url" placeholder="Ссылка на картинку" required class="popup__item popup__item_form_url" />
+                        <input type="url" name="link" id="url" placeholder="Ссылка на картинку" required class="popup__item popup__item_form_url" />
                         <span class="url-error popup__input-error"></span>
                     </section>
                     <button type="submit" class="popup__button popup__button-create">Создать</button>

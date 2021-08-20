@@ -1,4 +1,3 @@
-import FormValidator from "../components/FormValidator.js";
 export const popupCloseButton = document.querySelectorAll(".popup__close-button");
 export const popupElementImage = document.querySelector(".popup__image");
 export const popupTextImage = document.querySelector(".popup__text");
@@ -48,5 +47,3 @@ export const validationConfig = {
     inactiveButtonClass: "popup__button_inactive",
     errorClass: "popup__input-error_is_active"
 }
-export const formValidatorEdit = new FormValidator(validationConfig, formElementEditPopup);
-export const formValidatorAdd = new FormValidator(validationConfig, formElementAddPopup);
