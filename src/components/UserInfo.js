@@ -13,5 +13,12 @@ export default class UserInfo {
         this._profileName.textContent = item.name;
         this._profileJob.textContent = item.job;
     }
+    saveUserInfo(data) {
 
+        data.name = this._profileName.textContent
+        console.log(data)
+    }
+    saveAvatar(item) {
+        this._data = item.link
+    }
 }

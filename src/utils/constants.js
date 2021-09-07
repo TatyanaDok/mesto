@@ -15,32 +15,16 @@ export const popupCards = document.querySelector(".popup_cards");
 export const elementsContainer = document.querySelector(".elements");
 export const popupFormName = document.querySelector(".popup__item_form_names");
 export const popupFormUrl = document.querySelector(".popup__item_form_url");
-
-export const initialCards = [{
-        name: 'Архыз',
-        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
-    },
-    {
-        name: 'Челябинская область',
-        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
-    },
-    {
-        name: 'Иваново',
-        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
-    },
-    {
-        name: 'Камчатка',
-        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
-    },
-    {
-        name: 'Холмогорский район',
-        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
-    },
-    {
-        name: 'Байкал',
-        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
-    }
-];
+export const profileAvatar = document.querySelector(".profile__avatar")
+export const popupFormAvatar = document.querySelector(".popup__form-avatar")
+export const element = document.querySelector(".element")
+export const popupConfirm = document.querySelector(".popup_confirm")
+export const popupAvatar = document.querySelector(".popup_avatar")
+export const elementLikeButton = document.querySelector(".element__like-button")
+export const elementLikeCounter = document.querySelector(".element__like-counter")
+export const elementDeleteButton = document.querySelector(".popup__button-delete")
+export const popupButtonSave = document.querySelector(".popup__button-save")
+export const popupButtonCreate = document.querySelector(".popup__button-create")
 export const validationConfig = {
     inputSelector: ".popup__item",
     submitButtonSelector: ".popup__button",
