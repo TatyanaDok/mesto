@@ -2,6 +2,6 @@
     position: relative;
 }
 
-.profile__group:hover .profile__avatar_pencil {
+.profile__group:hover .profile__avatar-pencil {
     display: block;
 }
