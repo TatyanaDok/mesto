@@ -137,13 +137,13 @@ export default class Api {
             console.log(err);
         });
     }
-    editAvatar(item) {
+    editAvatar(data) {
         return fetch(`${this._url}/users/me/avatar`, {
                 method: 'PATCH',
                 headers: this._headers,
 
                 body: JSON.stringify({
-                    avatar: item.link
+                    avatar: data.link
                 })
 
             })

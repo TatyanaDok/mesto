@@ -5,20 +5,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mesto</title>
-
+    <link rel="stylesheet" href="./pages/index.css" />
 </head>
 
 
 <body class="body">
     <div class="root">
         <header class="header">
-            <img src="<%=require('./images/logo.svg')%>" alt="логотип" class="header__logo" />
+            <img src="./images/logo.svg" alt="логотип" class="header__logo" />
 
         </header>
         <main class="content">
             <section class="profile">
                 <div class="profile__group">
-                    <img src="#" alt="Логотип" class="profile__avatar">
+                    <img src="#" alt="Аватар" class="profile__avatar">
                     <div class="profile__avatar-pencil"></div>
                 </div>
                 <div class="profile__info">
@@ -82,7 +82,7 @@
                 <button type="button" aria-label="Закрыть" class="popup__close-button popup__close-confirm"></button>
                 <h2 class="popup__title">Вы уверены?</h2>
                 <form class="popup__form popup__form-confirm">
-                    <button type="button" class="popup__button popup__button-delete">Да</button>
+                    <button type="submit" class="popup__button popup__button-delete">Да</button>
                 </form>
             </div>
         </div>
@@ -92,7 +92,7 @@
                 <h2 class="popup__title">Обновить аватар</h2>
                 <form name="ava-form" id="ava-form" class="popup__form popup__form-avatar" novalidate>
                     <section class="popup__form-section">
-                        <input type="url" name="link" id="Url" placeholder="Ссылка на картинку" required class="popup__item popup__item_form_url" />
+                        <input type="url" name="link" id="url" placeholder="Ссылка на картинку" required class="popup__item popup__item_form_url" />
                         <span class="url-error popup__input-error"></span>
                     </section>
                     <button type="submit" class="popup__button popup__button-save">Сохранить</button>
@@ -113,7 +113,7 @@
             </div>
         </template>
     </div>
-
+    <script type="module" src="./pages/index.js"></script>
 </body>
 
 </html>
