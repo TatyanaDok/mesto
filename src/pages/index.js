@@ -1,4 +1,4 @@
-//import "../pages/index.css"
+import "../pages/index.css"
 import Card from "../components/Card.js";
 import Section from "../components/Section.js";
 import PopupWithImage from "../components/PopupWithImage.js";
@@ -6,7 +6,6 @@ import PopupWithForm from "../components/PopupWithForm.js";
 import UserInfo from "../components/UserInfo.js";
 import FormValidator from "../components/FormValidator.js";
 import Api from "../components/Api.js"
-//import Popup from "../components/Popup.js";
 import { profileName, popupAvatar, elementDeleteButton, popupButtonSave, profileJob, popupConfirm, popupEditElement, popupAddElement, profileAddButton, profileEditButton, popupCards, nameInput, jobInput, validationConfig, formElementEditPopup, formElementAddPopup, profileAvatar, popupFormAvatar, popupButtonCreate } from "../utils/constants.js";
 import PopupWithSubmit from "../components/PopupWithSubmit.js";
 
@@ -79,13 +78,13 @@ const popupAvatarUserInfo = new PopupWithForm(popupAvatar, (data) => {
     api.editAvatar(data)
         .then(data => {
             profileAvatar.src = data.avatar;
-            popupAvatarUserInfo.close()
         })
         .catch((err) => {
             console.log(err);
         })
         .finally(() => {
             popupButtonSave.textContent = "Сохранить"
+            popupAvatarUserInfo.close()
         });
     formValidatorAvatar.disableButton();
 })
@@ -131,7 +130,6 @@ Promise.all([
     })
 
 .catch((err) => {
-
     console.log(err);
 });
 
@@ -143,8 +141,8 @@ const popupWithFormEdit = new PopupWithForm(popupEditElement, (item) => {
                 userInfo.setUserInfo(item)
             })
             .finally(() => {
-                popupWithFormEdit.close()
                 popupButtonSave.textContent = "Сохранить"
+                popupWithFormEdit.close()
             });
     })
     //добавление лайка
@@ -153,7 +151,6 @@ function handlerAddLike(cardId, counter) {
 
     .then(data => {
             counter.textContent = data.likes.length;
-
         })
         .catch((err) => {
             console.log(err);
