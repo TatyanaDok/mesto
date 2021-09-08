@@ -73,9 +73,9 @@ function handleCardClick(name, link) {
 };
 
 //отправка картинки аватара на сервер
-const popupAvatarUserInfo = new PopupWithForm(popupAvatar, (data) => {
+const popupAvatarUserInfo = new PopupWithForm(popupAvatar, (formData) => {
     popupButtonSave.textContent = "Сохранение..."
-    api.editAvatar(data)
+    api.editAvatar(formData.url)
         .then(data => {
             profileAvatar.src = data.avatar;
         })
